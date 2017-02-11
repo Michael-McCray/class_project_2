@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body_block %}
+<!--Carousel Wrapper-->
+<div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+
+        <!--First slide-->
+        <div class="carousel-item active">
+            <!--Mask color-->
+            <div class="view hm-black-light">
+                <!--Video source-->
+                <video class="video-fluid" autoplay loop>
+                    <source src="https://r2---sn-ab5l6nzd.googlevideo.com/videoplayback?sparams=dur%2Cei%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cnh%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&ipbits=0&expire=1485934235&lmt=1481474211171524&initcwndbps=1582500&mime=video%2Fmp4&signature=06FB5F5D8FC58F16F6686CB620F467262B4C2F13.3386DB0A6A6D28DB417DC8053C5798D3321EC5C6&key=yt6&nh=IgpwcjAyLmxnYTI2KgkxMjcuMC4wLjE&ratebypass=yes&upn=cGN_GUSf8_A&ei=OzqRWJ3EKcyT8gSl86PwAQ&source=youtube&itag=22&ms=au&mt=1485912503&ip=108.58.233.210&mv=m&id=o-AG6rCCnZIw38HP1JY5avuPrjSXIC87Rd3qPFAk7EnOPy&requiressl=yes&dur=3482.807&mm=31&mn=sn-ab5l6nzd&pl=16" type="video/mp4" />
+                </video>
+                <div class="full-bg-img"></div>
+            </div>
+
+            <!--Caption-->
+            <div class="carousel-caption">
+            <ul class="animated fadeInUp col-md-12">
+                <li>
+                    <h1 class="h1-responsive flex-item">Code Dictionary</h1>
+                </li>
+                <li>
+                    <p class="flex-item">The number 1 resource for defining and learning programming terminology</p>
+                </li>
+                <li>
+                    <a target="_blank" href="{% url 'main' %}" class="btn btn-primary btn-lg flex-item">open dictionary</a>
+                </li>
+                <li>
+                    <a target="_blank" "{% url 'login' %}" class="btn btn-default btn-lg flex-item">Login / Register</a>
+                </li>
+            </ul>
+            <!--Caption-->
+        </div>
+        <!--/.First slide-->
+    </div>
+    <!--/.Slides-->
+
+</div>
+<!--/.Carousel Wrapper-->
+{% endblock %}

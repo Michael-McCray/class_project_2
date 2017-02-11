@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Add Word{% endblock %}
+{% block body_block %}
+		<h1 class="form-signin-heading">Add a Word</h1>
+		<form class="form-signin" id='word_form' method="post" action='/add-word/'>
+			<h3 class="form-signin-heading">Add a new Word.</h3>
+			{% csrf_token %}
+			{% for hidden in form.hidden_fields %}
+				{{ hidden }}
+			{% endfor %}
+
+			{% for field in form.visible_fields %}
+			<div class='form-group'>
+				{{field.errors}}
+				{{field.help_text}}
+				{{field.label}}
+				{{ field|addcls:'form-control' }}
+			</div>
+			{% endfor %}
+			<button type="submit" class="btn btn-default" name="btn-login" id="btn-login">
+            	<span class="glyphicon glyphicon-log-in"></span> &nbsp; Add Word
+            </button> 
+		</form>
+{% endblock %}
